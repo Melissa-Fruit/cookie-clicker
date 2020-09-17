@@ -1,0 +1,296 @@
+/* mediaqueries max width 1024 desctop*/
+@media all and (min-width: 1024px) {
+  img {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+  header {
+    margin-top: 10px;
+  }
+}
+/* mediaqueries max width 992 tablet*/
+@media screen and (max-width: 992px) {
+  img {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+  header {
+    margin-top: 10px;
+  }
+  /* Css by ID*/
+  #cost {
+    margin: 0;
+  }
+
+  /* Css by class*/
+  .but {
+    margin: 0;
+    text-align: center;
+  }
+}
+/* mediaqueries max width 600 smartphone*/
+@media only screen and (max-width: 600px) {
+  img.rotate {
+    width: 150px;
+  }
+  header {
+    margin-top: 0;
+  }
+  /* Css by ID*/
+
+  #cost {
+    margin-bottom: 0;
+  }
+
+  #multi {
+    margin: 10px;
+  }
+
+  /* Css by class*/
+  .but {
+    margin: 0;
+    text-align: center;
+  }
+
+  .glow-on-hover {
+    margin-bottom: 0px;
+  }
+}
+/*end mediaqueries*/
+/* Css for all */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Ranchers", cursive;
+  letter-spacing: 1px;
+  background-color: #1c3c86;
+  background-image: url("img/light.png");
+}
+
+/* Css for header */
+header {
+  font-family: "Ranchers", cursive;
+  text-align: center;
+}
+/* Css for h1 */
+h1 {
+  color: white;
+  letter-spacing: 5px;
+}
+
+/* Css for button */
+button {
+  margin: 20px;
+  height: 100%;
+}
+
+/* Css by ID*/
+#cost {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#label {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin: 0px auto;
+  border-radius: 30px;
+  background-color: #212121;
+  min-width: 100px;
+}
+
+#multi {
+  display: block;
+  margin: 10px auto;
+}
+
+#click:hover {
+  -webkit-animation: rotate 1s linear infinite;
+}
+
+#click:active {
+  -webkit-animation: zoom 0.3s linear infinite;
+}
+
+/* Css by class */
+.but {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  text-align: center;
+}
+/* Css for glowbuttons */
+.glow {
+  height: 50px;
+  min-width: 120px;
+  font-size: 20px;
+  font-family: "Ranchers", cursive;
+  color: #304194;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+  background-color: #fffb00;
+  border: 2px solid #bba800;
+  -webkit-animation: flash 0.3s linear infinite;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    -webkit-transform: scale(1, 1);
+    box-shadow: 0px 0px 17px 5px #d4d4a9;
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 17px 5px #5b67a5;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    box-shadow: 0px 0px 17px 5px #d4d4a9;
+  }
+}
+
+.glow:disabled {
+  background-color: rgb(104, 144, 177);
+  box-shadow: none;
+  border: 2px solid grey;
+  animation: none;
+  color: rgb(82, 82, 82);
+}
+
+.glow:hover {
+  background-color: #00ff62;
+  border: 2px solid #00ac42;
+  color: rgb(155, 44, 155);
+}
+
+/* Css for glow on image click button */
+.glow-on-1 {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
+.glow-on-1:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.glow-on-1:active {
+  color: #000;
+}
+
+.glow-on-1:active:after {
+  background: transparent;
+}
+
+.glow-on-1:hover:before {
+  opacity: 1;
+}
+
+.glow-on-1:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.rotate {
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+/* Css keyframes for glow on image click button */
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Css keyframes and animation for rotate */
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* Css animation and keyframes for zoom */
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
